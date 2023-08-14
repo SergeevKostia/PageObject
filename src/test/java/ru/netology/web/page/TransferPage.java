@@ -25,7 +25,7 @@ public class TransferPage {
     }
 
     public DashboardPage makeValidTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
-        makeTransfer(amountToTransfer,cardInfo);
+        makeTransfer(amountToTransfer, cardInfo);
         return new DashboardPage();
     }
 
@@ -35,7 +35,7 @@ public class TransferPage {
         transferButton.click();
     }
 
-    public void findErrorMassage(String expectedText){
+    public void findErrorMassage(String expectedText) {
         errorMassage.shouldHave(exactText(expectedText), Duration.ofSeconds(15)).shouldBe(visible);
     }
 }
